@@ -257,9 +257,10 @@ const App: React.FC = () => {
               <div className={`w-full transition-all duration-500 ${hasResultOrLoading ? 'mb-16' : 'max-w-2xl mx-auto'}`}>
                 {!hasResultOrLoading && (
                   <div className="text-center mb-10 animate-slide-up">
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-950 dark:text-white mb-6">
+                    <h1 className="text-3xl md:text-6xl font-black tracking-tighter text-slate-950 dark:text-white mb-6 leading-tight">
                       {t.landingTitle}
                     </h1>
+
                     <p className="text-base font-medium text-slate-600 dark:text-slate-400">
                       {t.landingSub}
                     </p>
@@ -273,7 +274,8 @@ const App: React.FC = () => {
                       value={query}
                       onChange={e => setQuery(e.target.value)}
                       placeholder={t.placeholder}
-                      className={`w-full transition-all duration-300 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/40 font-bold shadow-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 outline-none text-slate-950 dark:text-white ${hasResultOrLoading ? 'h-14 px-6 pr-12' : 'h-16 px-6 pr-12 text-lg'}`}
+                      className={`w-full transition-all duration-300 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/40 font-bold shadow-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 outline-none text-slate-950 dark:text-white ${hasResultOrLoading ? 'h-12 md:h-14 px-6 pr-12' : 'h-14 md:h-16 px-6 pr-12 text-base md:text-lg'}`}
+
                     />
                     {query && (
                       <button
@@ -291,10 +293,12 @@ const App: React.FC = () => {
                       value={subMultiple}
                       onChange={e => setSubMultiple(e.target.value)}
                       placeholder={t.multiplePlaceholder}
-                      className={`w-full transition-all duration-300 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/40 font-bold shadow-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 outline-none text-slate-950 dark:text-white ${hasResultOrLoading ? 'h-14 px-6 text-center' : 'h-16 px-6 text-lg text-center'}`}
+                      className={`w-full transition-all duration-300 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/40 font-bold shadow-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 outline-none text-slate-950 dark:text-white ${hasResultOrLoading ? 'h-12 md:h-14 px-6 text-center' : 'h-14 md:h-16 px-6 text-base md:text-lg text-center'}`}
+
                     />
                   </div>
-                  <button type="submit" className={`bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest transition-all shadow-xl hover:scale-105 active:scale-95 ${hasResultOrLoading ? 'h-14 px-8' : 'h-16 px-10'}`}>
+                  <button type="submit" className={`bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-black text-xs md:text-[10px] uppercase tracking-widest transition-all shadow-xl hover:scale-105 active:scale-95 ${hasResultOrLoading ? 'h-12 md:h-14 px-6 md:px-8' : 'h-14 md:h-16 px-8 md:px-10'}`}>
+
                     {t.analyze}
                   </button>
                 </form>
